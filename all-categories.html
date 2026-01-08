@@ -1,0 +1,497 @@
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategorien &amp; Räume - Wohnen.de</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-white text-slate-800 antialiased selection:bg-[#ee7016] selection:text-white flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-50 border-b border-slate-100 text-xs font-medium text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-10 flex items-center justify-between">
+            <div class="hidden md:flex items-center gap-6">
+                <span class="flex items-center gap-2">
+                    <span class="iconify text-[#ee7016]" data-icon="lucide:check" data-width="14"></span>
+                    Kostenloser Versand
+                </span>
+                <span class="flex items-center gap-2">
+                    <span class="iconify text-[#ee7016]" data-icon="lucide:phone" data-width="14"></span>
+                    Persönliche Beratung
+                </span>
+                <span class="flex items-center gap-2">
+                    <span class="iconify text-[#ee7016]" data-icon="lucide:star" data-width="14"></span>
+                    Über 50.000 glückliche Kunden
+                </span>
+            </div>
+            <div class="md:hidden flex items-center gap-2">
+                <span class="iconify text-[#ee7016]" data-icon="lucide:check" data-width="14"></span>
+                Kostenloser Versand DE
+            </div>
+            <div class="flex items-center gap-4 md:gap-6">
+                <a href="#" class="hover:text-[#ee7016] transition-colors">Anmelden</a>
+                <a href="#" class="hover:text-[#ee7016] transition-colors">Hilfe</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-8">
+                <button class="lg:hidden p-2 text-slate-600">
+                    <span class="iconify" data-icon="lucide:menu" data-width="24" style="stroke-width: 1.5;"></span>
+                </button>
+
+                <a href="#" class="flex-shrink-0">
+                    <img src="https://www.wohnen.de/media/51/3f/12/1652715314/logo%20%281%29.png" alt="Wohnen.de"
+                        class="h-8 md:h-10 w-auto">
+                </a>
+
+                <div class="hidden lg:flex flex-1 max-w-xl relative group">
+                    <input type="text" placeholder="Wonach suchen Sie heute?"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-full py-2.5 px-5 pl-12 text-sm text-slate-700 outline-none focus:border-[#ee7016] focus:ring-1 focus:ring-[#ee7016] transition-all">
+                    <span
+                        class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#ee7016] transition-colors">
+                        <span class="iconify" data-icon="lucide:search" data-width="18"
+                            style="stroke-width: 1.5;"></span>
+                    </span>
+                </div>
+
+                <div class="flex items-center gap-2 md:gap-4">
+                    <button class="lg:hidden p-2 text-slate-600">
+                        <span class="iconify" data-icon="lucide:search" data-width="24"
+                            style="stroke-width: 1.5;"></span>
+                    </button>
+                    <a href="#" class="p-2 text-slate-600 hover:text-[#ee7016] transition-colors relative group">
+                        <span class="iconify" data-icon="lucide:heart" data-width="24"
+                            style="stroke-width: 1.5;"></span>
+                    </a>
+                    <a href="#"
+                        class="p-2 text-slate-600 hover:text-[#ee7016] transition-colors relative flex items-center gap-2 group">
+                        <div class="relative">
+                            <span class="iconify" data-icon="lucide:shopping-bag" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                            <span
+                                class="absolute -top-1 -right-1 bg-[#ee7016] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                        </div>
+                        <span class="hidden xl:block text-sm font-medium group-hover:text-[#ee7016]">149,00 €</span>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="pb-2 overflow-x-auto no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+                <ul
+                    class="flex items-center gap-6 lg:gap-8 min-w-max text-sm font-medium text-slate-600 border-t border-slate-100 pt-3">
+                    <li><a href="#" class="hover:text-[#ee7016] transition-colors">Sale</a></li>
+                    <li><a href="#" class="text-[#ee7016] transition-colors">Kategorien</a></li>
+                    <li><a href="#" class="hover:text-[#ee7016] transition-colors">Wohnzimmer</a></li>
+                    <li><a href="#" class="hover:text-[#ee7016] transition-colors">Esszimmer</a></li>
+                    <li><a href="#" class="hover:text-[#ee7016] transition-colors">Schlafzimmer</a></li>
+                    <li><a href="#" class="hover:text-[#ee7016] transition-colors">Büro</a></li>
+                    <li><a href="#" class="hover:text-[#ee7016] transition-colors">Küche</a></li>
+                    <li><a href="#" class="hover:text-[#ee7016] transition-colors">Garten</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header / Breadcrumb -->
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-10">
+            <nav class="flex items-center text-sm text-slate-500 mb-6 space-x-2">
+                <a href="#" class="hover:text-[#ee7016] transition-colors">Home</a>
+                <span class="iconify text-slate-400" data-icon="lucide:chevron-right" data-width="14"></span>
+                <span class="text-slate-900 font-medium">Kategorien</span>
+            </nav>
+            <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+                Alles für Ihr Zuhause
+            </h1>
+            <p class="text-slate-500 font-light text-lg max-w-2xl leading-relaxed">
+                Entdecken Sie Möbel für jeden Raum und jeden Stil. Qualitativ hochwertig und direkt zu Ihnen geliefert.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow bg-white pb-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 space-y-20">
+
+            <!-- SECTION 1: Shoppe nach Räumen (Room Cards) -->
+            <section>
+                <div class="flex items-end justify-between mb-8">
+                    <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Shoppe nach Räumen</h2>
+
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card: Wohnzimmer -->
+                    <a href="#" class="group relative h-[320px] rounded-2xl overflow-hidden block">
+                        <img src="assets/images/category-wohnzimmer.jpg" alt="Wohnzimmer"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="text-xl font-semibold tracking-tight text-white mb-1">Wohnzimmer</h3>
+                            <p class="text-sm text-slate-300 font-light">Sofas, Sessel &amp; Tische</p>
+                        </div>
+                    </a>
+
+                    <!-- Card: Esszimmer -->
+                    <a href="#" class="group relative h-[320px] rounded-2xl overflow-hidden block">
+                        <img src="assets/images/category-esszimmer.jpg" alt="Esszimmer"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="text-xl font-semibold tracking-tight text-white mb-1">Esszimmer</h3>
+                            <p class="text-sm text-slate-300 font-light">Tische &amp; Stühle für Genießer</p>
+                        </div>
+                    </a>
+
+                    <!-- Card: Schlafzimmer -->
+                    <a href="#" class="group relative h-[320px] rounded-2xl overflow-hidden block">
+                        <img src="assets/images/shlaf.avif" alt="Schlafzimmer"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="text-xl font-semibold tracking-tight text-white mb-1">Schlafzimmer</h3>
+                            <p class="text-sm text-slate-300 font-light">Betten &amp; Kleiderschränke</p>
+                        </div>
+                    </a>
+
+                    <!-- Card: Babyzimmer -->
+                    <a href="#" class="group relative h-[320px] rounded-2xl overflow-hidden block">
+                        <img src="assets/images/baby-room.png" alt="Babyzimmer"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="text-xl font-semibold tracking-tight text-white mb-1">Babyzimmer</h3>
+                            <p class="text-sm text-slate-300 font-light">Geborgenheit für die Kleinsten</p>
+                        </div>
+                    </a>
+
+                    <!-- Card: Kinderzimmer -->
+                    <a href="#" class="group relative h-[320px] rounded-2xl overflow-hidden block">
+                        <img src="assets/images/kids-room.png" alt="Kinderzimmer"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="text-xl font-semibold tracking-tight text-white mb-1">Kinderzimmer</h3>
+                            <p class="text-sm text-slate-300 font-light">Spiel, Spaß &amp; Träume</p>
+                        </div>
+                    </a>
+
+                    <!-- Card: Jugendzimmer -->
+                    <a href="#" class="group relative h-[320px] rounded-2xl overflow-hidden block">
+                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&amp;fit=crop&amp;q=80&amp;w=800"
+                            alt="Jugendzimmer"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-8 w-full">
+                            <h3 class="text-xl font-semibold tracking-tight text-white mb-1">Jugendzimmer</h3>
+                            <p class="text-sm text-slate-300 font-light">Der eigene Rückzugsort</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Entdecke unsere Kategorien (Icon Grid) -->
+            <section>
+                <div class="mb-8">
+                    <h2 class="text-2xl font-semibold tracking-tight text-slate-900 mb-2">Entdecke unsere Kategorien
+                    </h2>
+                    <p class="text-slate-500 font-light">Finden Sie genau das Möbelstück, das Sie suchen.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+
+                    <!-- Item: Tische -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:table-2" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Tische</span>
+                    </a>
+
+                    <!-- Item: Stühle -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:armchair" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Stühle</span>
+                    </a>
+
+                    <!-- Item: Sitzbank -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:sofa" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Sitzbank</span>
+                    </a>
+
+                    <!-- Item: Sitzgruppen -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:layout-grid" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Sitzgruppen</span>
+                    </a>
+
+                    <!-- Item: Sofas -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:sofa" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Sofas</span>
+                    </a>
+
+                    <!-- Item: Sessel -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:rocking-chair" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Sessel</span>
+                    </a>
+
+                    <!-- Item: Betten -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:bed" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Betten</span>
+                    </a>
+
+                    <!-- Item: Schränke -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:door-closed" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Schränke</span>
+                    </a>
+
+                    <!-- Item: Regale -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:library" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Regale</span>
+                    </a>
+
+                    <!-- Item: Kommoden -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:archive" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Kommoden</span>
+                    </a>
+
+                    <!-- Item: Lampen & Leuchten -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:lamp" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Lampen
+                            &amp; Leuchten</span>
+                    </a>
+
+                    <!-- Item: Wohndeko -->
+                    <a href="#"
+                        class="group flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-xl p-6 hover:bg-white hover:border-[#ee7016]/30 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300">
+                        <div
+                            class="w-14 h-14 rounded-full bg-white border border-slate-100 flex items-center justify-center mb-4 text-[#ee7016] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all">
+                            <span class="iconify" data-icon="lucide:flower-2" data-width="24"
+                                style="stroke-width: 1.5;"></span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-700 group-hover:text-[#ee7016] transition-colors">Wohndeko</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SEO / Additional Info Block -->
+            <div class="border-t border-slate-100 pt-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-slate-900 mb-4">Einrichten leicht gemacht</h2>
+                        <p class="text-slate-500 leading-relaxed font-light mb-6">
+                            Bei Wohnen.de finden Sie nicht nur Möbel, sondern Inspiration. Wir legen Wert auf langlebige
+                            Materialien, modernes Design und eine Verarbeitung, die Ihnen lange Freude bereitet. Ob Sie
+                            nur ein einzelnes Akzentstück suchen oder einen ganzen Raum neu gestalten möchten – in
+                            unseren Kategorien werden Sie fündig.
+                        </p>
+                        <a href="#"
+                            class="text-[#ee7016] font-medium hover:text-[#d35f0f] inline-flex items-center gap-1 group">
+                            Mehr über uns erfahren
+                            <span class="iconify group-hover:translate-x-1 transition-transform"
+                                data-icon="lucide:arrow-right" data-width="16"></span>
+                        </a>
+                    </div>
+                    <div class="bg-slate-50 rounded-2xl p-8 md:p-12 text-center">
+                        <span class="iconify text-[#ee7016] mx-auto mb-4" data-icon="lucide:gift" data-width="40"
+                            style="stroke-width: 1;"></span>
+                        <h3 class="text-lg font-semibold text-slate-900 mb-2">Gutschein sichern</h3>
+                        <p class="text-sm text-slate-500 mb-6">Melden Sie sich für unseren Newsletter an und erhalten
+                            Sie 10€ Rabatt auf Ihre erste Bestellung.</p>
+                        <form class="flex gap-2 max-w-sm mx-auto">
+                            <input type="email" placeholder="Ihre E-Mail Adresse"
+                                class="flex-1 bg-white border border-slate-200 rounded-lg px-4 py-2 text-sm focus:border-[#ee7016] outline-none">
+                            <button
+                                class="bg-[#ee7016] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#d35f0f] transition-colors">Anmelden</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-20 pb-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+                <!-- Service -->
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-8">Service &amp; Hilfe
+                    </h4>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Kontaktformular</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Retouren &amp; Reklamation</a>
+                        </li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Versandinformationen</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Zahlungsarten</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">FAQ / Hilfe</a></li>
+                    </ul>
+                </div>
+                <!-- Company -->
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-8">Wohnen.de</h4>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Über uns</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Magazin</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Karriere</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Nachhaltigkeit</a></li>
+                    </ul>
+                </div>
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-8">Rechtliches</h4>
+                    <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Impressum</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">AGB</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Datenschutz</a></li>
+                        <li><a href="#" class="hover:text-[#ee7016] transition-colors">Widerrufsrecht</a></li>
+                    </ul>
+                </div>
+                <!-- Contact/Newsletter -->
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-8">Kontakt</h4>
+                    <p class="text-sm text-slate-400 font-light mb-6 leading-relaxed">
+                        Telefonische Beratung:<br>
+                        <span class="text-white font-medium text-base">+49 (0) 123 456 789</span><br>
+                        <span class="text-xs text-slate-500">Mo-Fr 8-18 Uhr</span>
+                    </p>
+                    <div class="flex gap-5">
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><span class="iconify"
+                                data-icon="lucide:instagram" data-width="22"></span></a>
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><span class="iconify"
+                                data-icon="lucide:facebook" data-width="22"></span></a>
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><span class="iconify"
+                                data-icon="lucide:pinterest" data-width="22"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <!-- Payment Icons -->
+                    <div class="flex gap-3 opacity-60 grayscale hover:grayscale-0 transition-all">
+                        <span class="bg-slate-200 text-slate-900 px-3 py-1 text-xs rounded font-bold">PayPal</span>
+                        <span class="bg-slate-200 text-slate-900 px-3 py-1 text-xs rounded font-bold">VISA</span>
+                        <span class="bg-slate-200 text-slate-900 px-3 py-1 text-xs rounded font-bold">Klarna.</span>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-600 text-center md:text-right">
+                    © 2026 Wohnen.de - Alle Preise inkl. MwSt. zzgl. Versandkosten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

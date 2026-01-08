@@ -131,8 +131,9 @@
     <!-- Modern Video Hero Section -->
     <section class="relative h-[85vh] min-h-[600px] w-full overflow-hidden flex items-center">
         <!-- Video Background -->
-        <div class="absolute inset-0 z-0">
-            <video autoplay="" loop="" muted="" playsinline="" class="w-full h-full object-cover"
+        <div class="absolute inset-0 z-0 bg-slate-200">
+            <video id="heroVideo" autoplay muted playsinline
+                class="w-full h-full object-cover opacity-0 transition-opacity duration-[1500ms]"
                 poster="assets/videos/hero.jpeg">
                 <!-- Using a high quality interior design / lifestyle video -->
                 <source src="assets/videos/hero-video.mp4" type="video/mp4">
@@ -148,7 +149,7 @@
                 <!-- Badge -->
                 <span
                     class="inline-flex items-center px-4 py-1.5 rounded-full bg-orange-50/90 backdrop-blur-sm border border-orange-200 text-[#ee7016] text-xs font-semibold tracking-wide uppercase shadow-sm">
-                    Neue Kollektion 2024
+                    Neue Kollektion 2026
                 </span>
 
                 <!-- Headline -->
@@ -186,7 +187,7 @@
                     </h2>
                     <p class="text-slate-500 mt-2 font-light text-lg">Alles für Ihr perfektes Zuhause.</p>
                 </div>
-                <a href="#"
+                <a href="all-categories.html"
                     class="text-sm font-medium text-[#ee7016] hover:text-[#d35f0f] flex items-center gap-1 group">
                     Alle Kategorien
                     <span class="iconify group-hover:translate-x-1 transition-transform" data-icon="lucide:arrow-right"
@@ -627,12 +628,62 @@
                     </div>
                 </div>
                 <p class="text-xs text-slate-600 text-center md:text-right">
-                    © 2025 Wohnen.de - Alle Preise inkl. MwSt. zzgl. Versandkosten.
+                    © 2026 Wohnen.de - Alle Preise inkl. MwSt. zzgl. Versandkosten.
                 </p>
             </div>
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('heroVideo');
+            if (!video) return;
+
+            const fadeDuration = 1.5; // seconds duration for fade
+
+            // Handle Initial Entrance
+            // When video starts playing, fade it in
+            video.addEventListener('play', () => {
+                // Determine if we are at the start
+                if (video.currentTime < 0.5) {
+                    // Small delay to ensure play starts smoothly
+                    setTimeout(() => {
+                        video.classList.remove('opacity-0');
+                    }, 100);
+                }
+            });
+
+            // Handle "Soft Loop"
+            video.addEventListener('timeupdate', () => {
+                const timeLeft = video.duration - video.currentTime;
+
+                if (timeLeft < fadeDuration) {
+                    // Fade out before end
+                    video.classList.add('opacity-0');
+                } else if (video.currentTime < fadeDuration && video.currentTime > 0.5) {
+                    // Ensure it's visible during the main playback (faded in)
+                    // We check > 0.5 to avoid flashing if 'play' event handled it slightly differently
+                    video.classList.remove('opacity-0');
+                }
+            });
+
+            // Manually loop to sync with fade
+            video.addEventListener('ended', () => {
+                video.currentTime = 0;
+                video.play();
+                // After restart, the 'play' event or timeupdate will handle fade in
+                // But let's explicitly request it after a tiny delay to allow the 'opacity-0' state to be registered at t=end
+                requestAnimationFrame(() => {
+                    // actually, we want the transition to occur.
+                    // It is currently opacity-0.
+                    // We want to go to opacity-1.
+                    setTimeout(() => {
+                        video.classList.remove('opacity-0');
+                    }, 50);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
